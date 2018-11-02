@@ -1,0 +1,8 @@
+#ignore dependency directory
+node_modules/
+
+#ignore my notes
+notes.txt
+
+#ignore the production build
+build/
