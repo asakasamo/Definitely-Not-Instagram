@@ -15,11 +15,17 @@ const defaultState = {
    comments
 };
 
+// enable detection by Redux devtools
+const enhancers = compose(
+   window.devToolsExtension ? window.devToolsExtension() : (f) => f
+);
+
 // create the store
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState, enhancers);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
+// enable hot reloading in Webpack
 if (module.hot) {
    module.hot.accept("./reducers", () => {
       const nextRootReducer = require("./reducers/index").default;
