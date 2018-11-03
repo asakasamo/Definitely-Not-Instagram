@@ -1,6 +1,6 @@
-# Learn Redux
+# Definitely Not Instagram
 
-A simple React + Redux implementation. This will be turned into a free video series once the app is totally fleshed out.
+An Instagram clone built in React/Redux
 
 ## Running
 
