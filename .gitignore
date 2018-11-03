@@ -6,4 +6,3 @@ notes.txt
 
 #ignore the production build
 build/
-dist/
