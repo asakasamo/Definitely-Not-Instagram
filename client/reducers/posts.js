@@ -1,5 +1,5 @@
 function posts(state = [], action) {
-   console.log("Posts reducer!", state, action);
+   // console.log("Posts reducer!", state, action);
 
    switch (action.type) {
       case "INCREMENT_LIKES":
