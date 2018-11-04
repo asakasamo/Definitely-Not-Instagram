@@ -1,6 +1,5 @@
 var path = require("path");
 var webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
    devtool: "source-map",
@@ -8,7 +7,7 @@ module.exports = {
    output: {
       path: path.join(__dirname, "dist"),
       filename: "bundle.js",
-      publicPath: ""
+      publicPath: "/static/"
    },
    plugins: [
       new webpack.optimize.OccurenceOrderPlugin(),
@@ -21,10 +20,6 @@ module.exports = {
          compressor: {
             warnings: false
          }
-      }),
-      new HtmlWebpackPlugin({
-         title: "Definitely Not Instagram",
-         template: "_index.html"
       })
    ],
    module: {
@@ -40,11 +35,6 @@ module.exports = {
             test: /\.styl$/,
             include: path.join(__dirname, "client"),
             loader: "style-loader!css-loader!stylus-loader"
-         },
-         // images
-         {
-            test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-            loader: "file-loader?name=[name].[ext]" // <-- retain original file name
          }
       ]
    }

@@ -4,9 +4,6 @@ import { render } from "react-dom";
 // import css
 import css from "./styles/style.styl";
 
-// require the favicon
-import "../favicon.png";
-
 // import components
 import App from "./components/App";
 import Single from "./components/Single";
