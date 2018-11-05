@@ -1,6 +1,6 @@
 # Definitely Not Instagram
-
 An Instagram clone built in React/Redux
+> [Demo](https://definitely-not-ig.herokuapp.com/)
 
 ## Running
 
