@@ -1,7 +1,10 @@
 {
    "name": "definitely-not-instagram",
    "version": "1.0.0",
-   "description": ":) ",
+   "description": "It's definitely not Instagram",
+   "engines": {
+      "node": "8.11.4"
+   },
    "scripts": {
       "build:webpack": "webpack -p --config webpack.config.prod.js",
       "build": "npm run clean && npm run build:webpack",
