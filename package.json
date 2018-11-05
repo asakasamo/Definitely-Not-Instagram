@@ -3,12 +3,12 @@
    "version": "1.0.0",
    "description": ":) ",
    "scripts": {
-      "build:webpack": "NODE_ENV=production && webpack --config webpack.config.prod.js",
+      "build:webpack": "webpack -p --config webpack.config.prod.js",
       "build": "npm run clean && npm run build:webpack",
       "test": "NODE_ENV=production && mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
       "clean": "rimraf dist",
       "start": "node devServer.js",
-      "heroku-postbuild": "npm run build"
+      "heroku-postbuild": "webpack -p --config webpack.config.prod.js"
    },
    "repository": {
       "type": "git",
@@ -47,7 +47,6 @@
       "style-loader": "^0.13.1",
       "stylus": "^0.54.5",
       "stylus-loader": "^2.0.0",
-      "webpack": "^1.13.0",
       "webpack-dev-middleware": "^1.6.1",
       "webpack-hot-middleware": "^2.10.0"
    },
@@ -56,6 +55,8 @@
       "expect": "^1.18.0",
       "expect-jsx": "^2.5.1",
       "mocha": "^5.2.0",
-      "react-addons-test-utils": "^15.0.2"
+      "react-addons-test-utils": "^15.0.2",
+      "webpack": "^1.15.0",
+      "webpack-cli": "^3.1.2"
    }
 }
